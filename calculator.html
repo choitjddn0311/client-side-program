@@ -82,11 +82,15 @@
         //버튼을 누르면 계산기가 열리게
         $(document).ready(function(){
             $("#vcal").click(function(){
-                $("#cal").stop().slideUp(500);
+                $("#cal").stop().slideDown(500);
             });
             $("#hcal").click(function(){
-                $("#cal").stop().slideDown(500);
+                $("#cal").stop().slideUpt(500);
             })
+            var i = 0;
+            setInterval(function(){
+                $("#txt").val(i++);
+            },1);
         })
     </script>
 </body>
