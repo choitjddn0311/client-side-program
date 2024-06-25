@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <style>
+        .fff {
+            background: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="abc" class="fff">
+        TEXT1 : <input type="text" name="a" id="a"> <br>
+        TEXT2 : <input type="text" name="b" id="b"> <br>
+        TEXT3 : <input type="text" name="c" id="c"> <br>
+        <input type="button" value="input" id="d">
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("#d").click(function(){
+                $(".fff").css("background","#FF0")
+            })
+        });
+    </script>
+</body>
+</html>
