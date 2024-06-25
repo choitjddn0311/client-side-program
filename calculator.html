@@ -17,19 +17,17 @@
             margin: 5px;
             width: 60px;
             height: 40px;
-            color: #1b63ff;
-            background: #fff;
+            color: #fff;
+            background: #1b63ff;
             border-radius: 5px;
             border: none;
             font-size: 19px;
             font-weight: bold;
             outline: none;
             transition: 0.5s;
-            border: 1px solid #1b63ff;
         }
         .nb:hover {
-            color: #fff;
-            background: #1b63ff;
+            background: #0d2e77;
             transition: 0.5s;
         }
         #txt {
@@ -45,7 +43,8 @@
     </style>
 </head>
 <body>
-    <form action="" name="cal">
+    <input type="button" value="계산기" id="vcal">
+    <form action="" name="cal" id="cal">
         <input type="text" name="txt" id="txt"><br>
         <input type="button" value="1" class="nb" onclick="ni(1)"><input type="button" value="2" class="nb" onclick="ni(2)"><input type="button" value="3" class="nb" onclick="ni(3)"><br>
         <input type="button" value="4" class="nb" onclick="ni(4)"><input type="button" value="5" class="nb" onclick="ni(5)"><input type="button" value="6" class="nb" onclick="ni(6)"><br>
@@ -55,15 +54,26 @@
         <input type="button" value="C" class="nb" onclick="dn()">
     </form>
     <script>
+        //누르면 숫자 표시되게 하는 코드
         function ni(nn) {
             document.cal.txt.value = document.cal.txt.value+nn;
         }
+        //숫자들이 계산될 수 있도록 하는 코드
         function ex() {
             document.cal.txt.value=eval(document.cal.txt.value);
         }
+        //숫자들을 clear해주는 코드
         function dn() {
             document.cal.txt.value = " ";
         }
+        
+        //jquery 부분
+        //버튼을 누르면 계산기가 열리게
+        $(document).ready(function(){
+            $("#vcal").click(function(){
+                
+            })
+        })
     </script>
 </body>
 </html>
