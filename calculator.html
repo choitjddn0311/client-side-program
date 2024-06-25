@@ -40,10 +40,21 @@
             border-radius: 5px;
             color: #1b63ff;
         }
+        #vcal , #hcal{
+            border: none;
+            color: #fff;
+            background: #0d2e77;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100px;
+            height: 40px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <input type="button" value="계산기" id="vcal">
+    <input type="button" value="계산기 보기" id="vcal">
+    <input type="button" value="계산기 가리기" id="hcal">
     <form action="" name="cal" id="cal">
         <input type="text" name="txt" id="txt"><br>
         <input type="button" value="1" class="nb" onclick="ni(1)"><input type="button" value="2" class="nb" onclick="ni(2)"><input type="button" value="3" class="nb" onclick="ni(3)"><br>
@@ -71,7 +82,10 @@
         //버튼을 누르면 계산기가 열리게
         $(document).ready(function(){
             $("#vcal").click(function(){
-                $("#cal").fadeToggle();
+                $("#cal").stop().slideUp(500);
+            });
+            $("#hcal").click(function(){
+                $("#cal").stop().slideDown(500);
             })
         })
     </script>
