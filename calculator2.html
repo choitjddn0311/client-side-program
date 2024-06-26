@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <style>
+        .num_btn {
+            width: 40px;
+            height: 40px;
+            margin: 2px 2px;
+        }
+        .num_input {
+            width: 165px;
+            height: 40px;
+            margin-left: 2px;
+            text-align: right;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="cal">
+        <input type="text" id="num_input" class="num_input" name="num_input"><br>
+        <input type="button" value="1" class="num_btn" onclick="inum(1)"><input type="button" value="2" class="num_btn" onclick="inum(2)"><input type="button" value="3" class="num_btn" onclick="inum(3)"><input type="button" value="4" class="num_btn" onclick="inum(4)"><br>
+        <input type="button" value="5" class="num_btn" onclick="inum(5)"><input type="button" value="6" class="num_btn" onclick="inum(6)"><input type="button" value="7" class="num_btn" onclick="inum(7)"><input type="button" value="8" class="num_btn" onclick="inum(8)"><br>
+        <input type="button" value="9" class="num_btn" onclick="inum(9)"><input type="button" value="0" class="num_btn" onclick="inum(0)"><input type="button" value="+" class="num_btn" onclick="inum('+')"><input type="button" value="-" class="num_btn" onclick="inum('-')"><br>
+        <input type="button" value="*" class="num_btn" onclick="inum('*')"><input type="button" value="/" class="num_btn" onclick="inum('/')"><input type="button" value="C" class="num_btn" onclick="deln()"><input type="button" value="=" class="num_btn" onclick="numRes()">
+    </form>
+
+    <script>
+        function inum(e) {
+            document.cal.num_input.value = document.cal.num_input.value+e;
+        }
+        function deln() {
+            document.cal.num_input.value = " ";
+        }
+        function numRes() {
+            document.cal.num_input.value = eval(document.cal.num_input.value);
+        }
+    </script>
+</body>
+</html>
