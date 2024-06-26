@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            font-family: 'Raleway' , sans-serif;
+        }
+        body {
+            background: #eee;
+        }
+        .contain {
+            width: 250px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+        .num_btn {
+            width: 60px;
+            height: 60px;
+            margin: 1px 1px 1px 1px;
+            background: #0f81bd;
+            border: none;
+            color: #f5f5f5;
+            transition: 0.3s;
+            font-size: 19px;
+        }
+        .num_btn:hover {
+            color: #0f81bd;
+            background: #f5f5f5;
+            transition: 0.3s;
+        }
+        .num_input {
+            width: 228px;
+            height: 28px;
+            text-align: right;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #fff;
+            outline: none;
+            padding: 10px;
+            margin-top: 20px;
+            color: #0f81bd;
+        }
+        form {
+            position: relative;
+        }
+        .num_contain {
+            margin-top: 50px;
+        }
+        .delete {
+            width: 50px;
+            height: 30px;
+            font-size: 25px;
+            line-height: 30px;
+            position: absolute;
+            top: 90px;
+            right: 3px;
+            color: #0f81bd;
+            border: none;
+            text-align: right;
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+        }
+        .delete:hover {
+            color: red;
+            transition: 0.3s;
+        }

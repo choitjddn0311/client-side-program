@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contain">
+        <form action="" name="cal">
+            <input type="text" id="num_input" class="num_input" name="num_input"><button class="delete" onclick="delNum()" name="delNum"><i class="fa-solid fa-delete-left"></i></button><br>
+            <div class="num_contain">
+                <input type="button" value="1" class="num_btn" onclick="inum(1)"><input type="button" value="2" class="num_btn" onclick="inum(2)"><input type="button" value="3" class="num_btn" onclick="inum(3)"><input type="button" value="4" class="num_btn" onclick="inum(4)"><br>
+            <input type="button" value="5" class="num_btn" onclick="inum(5)"><input type="button" value="6" class="num_btn" onclick="inum(6)"><input type="button" value="7" class="num_btn" onclick="inum(7)"><input type="button" value="8" class="num_btn" onclick="inum(8)"><br>
+            <input type="button" value="9" class="num_btn" onclick="inum(9)"><input type="button" value="0" class="num_btn" onclick="inum(0)"><input type="button" value="+" class="num_btn" onclick="inum('+')"><input type="button" value="-" class="num_btn" onclick="inum('-')"><br>
+            <input type="button" value="*" class="num_btn" onclick="inum('*')"><input type="button" value="/" class="num_btn" onclick="inum('/')"><input type="button" value="C" class="num_btn" onclick="deln()"><input type="button" value="=" class="num_btn" onclick="numRes()">
+            </div>
+        </form>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
